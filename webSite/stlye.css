@@ -1,0 +1,476 @@
+#mainContenair{
+    margin: 0;
+    padding: 0;
+
+
+}
+#naviBar{
+  border: 1px solid white;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 90px;
+  gap: 350px;
+  padding: 25px 35x;
+  position: sticky;
+  top: 0;
+  .h1{
+    font-size: 25px;
+    padding: 10px 20px;
+  }
+}
+.a1 a{
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 10px 20px ;
+  gap: 10px;
+}
+#btn{
+  align-content: flex-end;
+  padding: 20px 30px;
+  gap: 5px;
+}
+.but{
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  text-decoration-color: black;
+  font-weight: 400;
+  font-size: 20px;
+}
+.button{
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  background-color:black;
+  text-decoration-color:white;
+  font-weight: 400;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.but:hover{
+  background-color: rgb(151, 157, 157);
+}
+.a1 a img{
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+  
+}
+#myDetail {
+  display: flex;       
+  align-items: center;      
+ justify-content: space-around;
+  padding: 25px;
+  gap: 40px;                    
+  padding: 40px;
+  background-color: white;    
+  color: black;              
+}
+.detail{
+  width: 600px;
+}
+#myDetail h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+  color: black               
+}
+
+#myDetail h3 {
+  font-size: 25px;
+  color: rgb(138, 126, 126);
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+#contact {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.inputField {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+#contact label {
+  flex-direction: column;
+  color: rgb(54, 53, 53);
+  font-size: 20px;
+  
+}
+
+#contact input {
+  color: rgb(100, 99, 99);
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  font-size: 20x;
+  border: 2px solid black;
+  border-radius: 5px;
+  outline: none;
+}
+
+#contact button {
+  width: 250px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px; 
+  font-size: 18px;
+}
+.condition{
+   color: rgb(134, 132, 132);
+   font-size: 20px;
+}
+
+#contact button:hover {
+  background-color: #0097a7;
+}
+
+
+#contact a {
+  color: rgb(176, 171, 171);
+  text-decoration: underline;
+}
+#contact a:hover {
+  text-decoration: underline;
+}
+
+
+#myDetail img {
+  width: 700px;
+  height: 700px;
+  border-radius: 15px;
+  margin-right: 75px;
+  object-fit:fill;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+#myIcons{
+  text-align: center;
+  display:inline;
+  padding: 20px;
+  align-content: center;
+
+}
+.subDiv{
+
+  
+  display:inline-flexbox;
+  flex-direction: column;
+  justify-content:space-between;
+  align-content: center;
+   
+  }
+.subDiv img{
+      width: 200px;
+      height: 200px;
+   }
+#skills{
+  display: block;
+  justify-content:space-between;
+  align-content: center;
+  text-align: center;
+
+}
+#skills h4{
+  font-size:22px;
+}
+#skills h1{
+  font-size:50px;
+}
+
+#skills h3{
+  padding-left: 90px;
+  margin-left:60px;
+  align-items: center;
+  font-size:23px;
+  color: rgb(184, 181, 181);
+}
+#d1{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px auto;
+  
+
+}
+#d1 span{
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+#d1 span img{
+   padding: 25px;
+  width: 40px;
+  height: 40px;
+}
+#d1 span p{
+  color: rgb(172, 168, 168);
+  font-size: 23px;
+}
+#project{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  justify-content: space-between;
+  gap: 20px;
+  margin: 30px;
+}
+#card{
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 20px;
+}
+#card img{
+  text-align: justify;
+  margin-right: 40px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px;
+  width: 100%;
+  height: auto;
+}
+#card h1{
+  margin-right: 20pxpx;
+  text-align:justify;
+  font-size: 28px;
+  font-weight: bold;
+}
+#card p{
+  
+  text-align: start;
+  margin: 0 0 10px 0;
+  font-size: 22px;
+  color: rgb(158, 157, 157);
+}
+.btn1{
+  text-align: start;
+  width: 140px;
+  height: 30px;
+ padding: 8px 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px; 
+  font-size: 18px;
+  display: block;
+
+}
+#resume{
+  display: flex;       
+  align-items: flex-start;      
+  justify-content:flex-start;
+  gap: 35%;      
+  padding-left: 50px;              
+  background-color: white;    
+  color: black; 
+}
+#resume span{
+  margin-left: 20px;
+}
+#resume span h1{
+  text-align: start;
+  font-size: 55px;
+  
+}
+#resume span p{
+  text-align: start;
+  color: rgb(158, 157, 157);
+  font-size: 22px;
+}
+#resume span a{
+  text-decoration: none;
+  color:black ;
+  font-size: 20px;
+  font-weight: bold;
+}
+.fg span{
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+.fg span img{   
+  width: 80px;
+  height: 80px;
+}
+#client{
+  display: flex;
+}
+.subDiv1{
+  display:inline-flexbox;
+  flex-direction: column;
+  justify-content:space-between;
+  align-content: center;
+}
+.subDiv1 img{
+  border: none;
+      width: 200px;
+      height: 200px;
+      background-color:white;
+      filter: grayscale(100%);
+      color:aliceblue   
+}
+#ids{
+   display: flex;       
+  align-items: center;      
+  justify-content: space-around;
+  gap: 5px;
+  padding: 25px;
+  gap: 40px;                    
+  padding: 40px;
+  background-color: white;  
+  border: 2px solid rgb(250, 247, 247);
+  border-radius: 20px ;  
+  box-shadow: 8px;
+  color: black;  
+}
+.id{
+  padding-top: 50px;
+  padding-left: 60px;
+  margin: 50px;
+  gap: 25%;
+  width: 700px;
+  height: 600px;
+  border: 1px solid black;
+  background-color: black;
+  h3{
+    color: white;
+    font-size: 40px;
+  }
+  p{
+    color: beige;
+    font-size: 20px;
+  }
+  h2{
+    color: white;
+    font-size: 25px;
+  }
+
+}
+#forField {
+  width: 500px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+   gap: 25px;
+}
+#forField label {
+  font-size: 20px;
+  color: #8c9bb9;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+#forField input[type="text"],
+#forField input[type="email"] {
+  
+  border: none;
+  border-bottom: 2px solid #333;
+  padding: 8px 0;
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+  background: transparent;
+}
+#forField input[type="text"]:focus,
+#forField input[type="email"]:focus {
+  border-bottom: 2px solid black;
+}
+#forField span{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+#forField span label {
+  margin-right: 10px;
+  font-size: 22px;
+  color: #b7b0b0;
+}
+#forField span input{
+  transform: scale(1.3);
+  margin-right: 6px;
+
+}
+#forField input[type="radio"] {
+  transform: scale(1.3);
+  margin-right: 6px;
+}
+#forField button {
+  background-color:black;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  width: 240px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 70%;
+}
+.nameRow{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.nameRow div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+#forField h1{
+  color:  #8c9bb9;
+  font-size: 30px;
+}
+#ladtNavBar{
+  border: none;
+  background-color: white;
+  border-radius: 2px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  gap: 10%;
+  
+  
+}
+#ladtNavBar h1{
+  padding-right: 18px;
+  font-size: 20px;
+  color: #868181 ;
+
+}
+#ladtNavBar button{
+  gap:50%;
+  margin:8px;
+  padding: 10px;
+  background-color: white;
+  border: none;
+  font-size: 18px;
+  color: #868181 ;
+  
+}
+#ladtNavBar div{
+  .sub{
+  background-color:black;
+  color: white;
+  border: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  }
+}
+ 

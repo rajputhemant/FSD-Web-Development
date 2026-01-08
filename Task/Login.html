@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BootstrapFrom</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"/>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0%;
+        background-color: blue !important;
+      }
+      #loginButton:hover {
+        background: #4a83b9 !important;
+      }
+      #loginButton:active {
+        background: blue !important;
+      }
+
+      #cancelButton:hover {
+        background: #4780ba !important;
+      }
+      #cancelButton:active {
+        background: blue !important;
+      }
+    </style>
+  </head>
+  <body
+    class="w-100 h-100 bg-primary d-flex justify-content-center align-content-centre">
+    
+    <div
+      style="width: 500px; height: 500px"
+      class="bg-light  mt-5 rounded-5 position-relative position-absolute border-end-2 border ">
+      <div
+        class="text-primary d-flex align-items-center justify-content-center mt-3">
+        <h2 class="text-black">User Login</h2>
+      </div>
+      <div class="text-center mt-4">
+        <span class="text-black"><b>Username:</b></span> &nbsp;&nbsp; <input
+        "type="text" id="Username " placeholder="Username" class=" rounded-3
+        border-0 p-2  " />
+        <br/>
+        <div class="mt-4">
+          <span class="text-black"><b>Password:</b></span> &nbsp;&nbsp;
+          <input
+            type="password"
+            name="Password"
+            placeholder="Enter your password"
+            class="rounded-3 border-0 p-2"/ id="ConfirmPassword">
+        </div>
+      </div>
+
+      <div class="text-center p-5">
+        <button
+          type="Cancle"
+          id="CancelButton"
+          class="form-control-sm p-2 ps-3 pe-3 rounded-3 text-white ms-4 bg-danger border-0">
+          cancle
+        </button>
+
+        <button
+          type="Login"
+          class="form-control-sm p-2 ps-3 pe-3 rounded-3 text-white ms-1 bg-success border-0 border-white"
+          id="LoginButton">
+          Login
+        </button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous">
+    </script>
+  </body>
+</html>

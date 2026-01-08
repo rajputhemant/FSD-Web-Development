@@ -1,0 +1,101 @@
+#naviBar{
+  padding-left: 90px !important;
+  gap: 350px !important;
+  align-items: center !important;
+ 
+  
+  .h1{
+    font-size: 25px !important;
+    padding: 10px 20px;
+  }
+}
+
+#a1 a img{
+  width: 25px !important;
+  height: 25px !important;
+  margin-right: 8px;
+  
+}
+#btn{
+  padding: 20px 30px;
+  
+}
+#btu:hover{
+  background-color: rgb(151, 157, 157);
+}
+#MyDetail{
+  justify-content: space-around !important;
+}
+#MyDetail h1{
+  font-size: 70px !important;
+}
+#MyDetail h3{
+font-size: 39px !important;
+}
+#contact label{
+  flex-direction: column;
+}
+#contact input{
+  width: 350px;
+  height: 60px;
+}
+#contact button{
+  width: 250px;
+  height: 50px;
+}
+#contact button :hover{
+  background-color: aqua;
+}
+#contact img{
+  width: 700px;
+  height: 600px;
+}
+#myIcons{
+  text-align: center !important;
+
+}
+.subDiv img{
+  margin-left: 50px !important;
+      width: 200px;
+      height: 200px;
+}
+#skills {
+  text-align: center;
+}
+#d1{
+  grid-template-columns: repeat(3,1fr);
+  margin: 20px auto;
+}
+#d1 span img{
+  width: 40px;
+  height: 40px;
+}
+#project{
+   grid-template-columns: repeat(4,1fr);
+  
+}
+#card{
+  text-align: center;
+
+}
+#resume{
+  gap: 30%;
+}
+.fg span img{   
+  width: 80px;
+  height: 80px;
+}
+.subDiv1 img{
+  margin-left: 50px !important;
+      width: 200px;
+      height: 200px;
+      filter: grayscale(100%);
+}
+.id{
+  width: 700px;
+  height: 600px;
+}
+#forField {
+  width: 500px;
+  margin: 30px auto;
+}

@@ -1,0 +1,20 @@
+
+.form-box {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 25px;
+      background: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.form-box h2 span {
+      color: #007bff;
+ }
+.icon-label {
+      font-size: 22px;
+      width: 40px;
+      text-align: center;
+}
+.eye {
+      cursor: pointer;
+      font-size: 22px;
+}

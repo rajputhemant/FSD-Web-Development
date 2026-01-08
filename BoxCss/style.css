@@ -1,0 +1,17 @@
+#d1{
+    border: 2px solid black;
+    width: 50px;
+    height: 20px;
+    background-color: aqua;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 2px 2px 10px 5px black;
+   
+}
+#d1 span {
+ text-shadow: 2px 2px 10px red ;
+    background: linear-gradient();
+    background-clip: text;
+    color: transparent;
+
+}

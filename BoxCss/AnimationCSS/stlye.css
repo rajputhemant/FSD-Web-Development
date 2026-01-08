@@ -1,0 +1,117 @@
+h1{
+    border: 2px solid black;
+    width: 200px;
+    margin-left: 0px;
+    
+
+    
+
+}
+h1:hover{
+
+   width: 500px;
+   transition:width 5s ;
+}
+#outer{
+    width: 500px;
+    height: 50px;
+    border: 2px solid black;
+
+    #box{
+    width: 1%;
+    height: 100%;
+    background-color: blue;
+    }
+}
+
+#outer:hover{
+    #box{
+        width: 100%;
+        background-color: red;
+        transition:width 5s ease-in-out ,background-color 5s ease-out;
+    }
+}
+#outer1{
+    width: 500px;
+    height: 50px;
+    border: 2px solid black;
+
+    #box1{
+    
+    height: 50px;
+   
+    }
+}
+
+#outer1:hover{
+    #box1{
+       animation: MyAnimantion 5s linear;
+    }
+}
+#d2{
+    border: 1px solid black;
+    font-size: xx-large;
+    width:80px ;
+    height: 50px;
+    
+    
+}
+#d2:hover{
+    transform: rotateZ(90deg);
+    transition: transform 5s;
+}
+@keyframes MyAnimantion {
+    0%{
+        width: 0%;
+        background-color:red;
+    }
+    50%{
+        width: 50%;
+        background-color:yellow;
+    }
+     100%{
+        width: 100%;
+        background-color: green;
+    }
+
+
+/*
+#dabba{
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    animation: NewmyAnimation 4s linear infinite;
+
+    
+}
+
+@keyframes NewmyAnimation{
+    0%{
+        top: 0%;
+        left: 0%;
+        background-color: blue;
+    }
+    25%{
+        top: 0%;
+        left: 500%;
+        background-color: blue;
+    }
+    50%{
+        top: 500%;
+        left: 500%;
+        background-color: blanchedalmond;
+    }
+    75%{
+        top: 500%;
+        left: 0%;
+        background-color: blueviolet;
+    }
+    100%{
+        top: 0%;
+        left: 0%;
+        background-color: black;
+    }
+
+  }*/
+  

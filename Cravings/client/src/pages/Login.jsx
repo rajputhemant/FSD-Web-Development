@@ -129,7 +129,7 @@ const Login = () => {
                 </button>
               </div>
               <div className="px-2 mt-5 grid items-center justify-center text-orange-600 hover:scale-105 hover:font-bold">
-                <Link to={"/register"}>You dont have Register Go to Register</Link>
+                <Link to={"/register"}>You don't have Register Go to Register</Link>
               </div>
             </form>
           </div>

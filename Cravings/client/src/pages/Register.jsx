@@ -171,7 +171,7 @@ const Register = () => {
                   disabled={isLoading}
                   className="flex-1 bg-gray-300 text-gray-800 font-bold py-4 px-6 rounded-lg hover:bg-gray-400 transition duration-300 transform hover:scale-105 disabled:scale-100 disabled:bg-gray-300 disabled:cursor-not-allowed"
                 >
-                  Clear Form
+                  Clear From
                 </button>
                 <button
                   type="submit"

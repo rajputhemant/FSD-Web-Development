@@ -8,13 +8,15 @@ import UserHelp from '../../components/userDashboard/UserHelp';
 
 const UserDashboard = () => {
     const [active, setActive]=useState('overview');
+    const [iscollapsed,setisCollapsed]=useState(false)
   return (
    <>
     <div className='flex h-[90vh] w-full'>
-        <div className="bg-(--color-background) border-green-400 w-2/10">
-        <SiderBar active={active} setActive={setActive}/>
+        <div className={`bg-(--color-background) duration-300 ${iscollapsed?"w-2/60":"w-12/60"}`}>
+        <SiderBar active={active} setActive={setActive}
+          iscollapsed={iscollapsed} setisCollapsed={setisCollapsed}/>
         </div>
-        <div className="border border-amber-400 w-8/10">
+        <div className={`duration-300 ${iscollapsed?"w-58/60":"w-48/60"}`}>
         {active==='overview'&& <UserOverview/>}
         {active==='profile'&& <UserProfile/>}
         {active==='orders'&& <UserOrders/>}

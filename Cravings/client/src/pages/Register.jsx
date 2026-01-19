@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import api from "../config/Api";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -153,7 +154,7 @@ const Register = () => {
                   <input
                     type="password"
                     name="confirmPassword"
-                    placeholder="Confirm Password"
+                    placeholder="Confirm Password  "
                     value={formData.confirmPassword}
                     onChange={handleChange}
                     required
@@ -179,10 +180,19 @@ const Register = () => {
                 >
                   {isLoading ? "Submitting" : "Submit"}
                 </button>
+                
+              </div>
+              <div className="px-2 mt-5 grid items-center justify-center text-orange-600 hover:scale-105 hover:font-bold">
+               <Link to={"/login"}>
+                You have Already Account Go to Login
+                </Link>
               </div>
             </form>
           </div>
-
+         
+         
+         
+         
           {/* Footer Note */}
           <p className="text-center text-gray-600 mt-8 text-sm">
             All fields marked are mandatory. We respect your privacy.

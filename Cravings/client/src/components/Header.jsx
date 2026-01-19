@@ -11,34 +11,34 @@ const Header = () => {
           <img
             src={tranparentLogo}
             alt=""
-            className="h-12 w-20 object-cover invert-100"
+            className="h-12 w-20 object-cover invert-100 hover:scale-105"
           />
         </Link>
         <div className="flex gap-4">
           <Link
             to={"/"}
-            className="text-decoration-none text-white hover:text-(--color-accent)"
+            className="text-decoration-none text-white hover:text-(--color-accent) hover:scale-105"
           >
             Home
           </Link>
           <Link
             to={"/about"}
-            className="text-decoration-none text-white hover:text-(--color-accent)"
+            className="text-decoration-none text-white hover:text-(--color-accent) hover:scale-105"
           >
             About
           </Link>
           <Link
             to={"/contact"}
-            className="text-decoration-none text-white hover:text-(--color-accent)"
+            className="text-decoration-none text-white hover:text-(--color-accent) hover:scale-105"
           >
             Contact
           </Link>
         </div>
         <div className="flex gap-5">
-          <button onClick={()=> navigate("/login")} className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded ">
+          <button onClick={()=> navigate("/login")} className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded  duration-300 hover:scale-110">
             Login
           </button>
-          <button onClick={()=> navigate("/register")} className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded ">
+          <button onClick={()=> navigate("/register")} className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded   duration-300 hover:scale-110">
             Register
           </button>
         </div>

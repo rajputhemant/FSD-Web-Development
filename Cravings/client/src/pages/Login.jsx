@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import api from "../config/Api";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
 
@@ -120,8 +120,6 @@ const Login = () => {
               {/* Submit Button */}
               <div className="flex gap-4 pt-8 border-t-2 border-gray-200">
                 
-              
-
                 <button
                   type="submit"
                   disabled={isLoading}
@@ -129,6 +127,9 @@ const Login = () => {
                 >
                   {isLoading?"submitting ":"Login"}
                 </button>
+              </div>
+              <div className="px-2 mt-5 grid items-center justify-center text-orange-600 hover:scale-105 hover:font-bold">
+                <Link to={"/register"}>You dont have Register Go to Register</Link>
               </div>
             </form>
           </div>

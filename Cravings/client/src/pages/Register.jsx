@@ -182,9 +182,10 @@ const Register = () => {
                 </button>
                 
               </div>
-              <div className="px-2 mt-5 grid items-center justify-center text-orange-600 hover:scale-105 hover:font-bold">
-               <Link to={"/login"}>
-                You have Already Account Go to Login
+              <div className=" px-2 mt-5  flex gap-2 items-center justify-center  ">
+               <p>You have Already Account Go to</p>
+               <Link to={"/login"}  className="text-blue-700 hover:scale-105">
+                 Login
                 </Link>
               </div>
             </form>

@@ -21,6 +21,7 @@ const Header = () => {
             to={"/"}
             className="text-decoration-none text-white hover:text-(--color-accent) hover:scale-105"
           >
+    
             Home
           </Link>
           <Link
@@ -37,10 +38,11 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex gap-5">
-         {isLogin? ( <span className="text-red-800 font-bold">{user.fullName}</span>
+         {isLogin? ( <span className="text-red-800 font-bold text-xl me-5">{user.fullName}</span>
          
         ): (
             <>
+              
               <button
                 onClick={() => navigate("/login")}
                 className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded "

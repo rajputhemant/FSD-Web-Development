@@ -10,7 +10,7 @@ import snap from "../assets/snap.png";
 export const Footer = () => {
   return (
     <>
-      <div className="flex justify-between mx-5 mt-3 bg-gray-300 sahadow  w-370 h-55">
+      <div className="flex justify-between  mt-3 bg-gray-300 sahadow  w-380 h-55">
         <div className="w-120  ms-4 py-2">
           <h1 className="text-pink-600 text-2xl">GlowUp Beatuy</h1>
           <p>Enhancing Your natural beatuy with care & confidence ✨</p>
@@ -50,7 +50,7 @@ export const Footer = () => {
 
 
       </div>
-       <div className=" bg-gray-300 sahadow  w-370 mx-5 h-10 border-gray-100 shadow-fuchsia-100 text-center ">
+       <div className=" bg-gray-300 sahadow  w-380  h-10 border-gray-100 shadow-fuchsia-100 text-center ">
         <h1>2026 Beauty Makeup. All right reserved</h1>
        </div>
     </>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { FaOutdent } from "react-icons/fa";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
@@ -7,6 +7,7 @@ import { IoIosContacts } from "react-icons/io";
 import logo from "../assets/Lo.png";
 
 export const Header = () => {
+  const navigate =useNavigate();
   return (
     <>
     
@@ -18,6 +19,11 @@ export const Header = () => {
         <Link to={"/product"} className="decoration-none  flex items-center gap-2 hover:scale-105"> <MdOutlineProductionQuantityLimits /><span>Product</span></Link>
          <Link to={"/contact"} className="decoration-none  flex items-center gap-2 hover:scale-105"> <IoIosContacts /><span>Contact</span></Link>
 
+      </div>
+
+      <div className='flex justify-between gap-5 items-center'>
+        <button className='bg-blue-600 text-white h-10 w-20 shadow-2xl rounded-xl border hover:scale-105 hover:bg-emerald-500 hover:text-black ' onClick={() =>navigate("/login")}>Login</button>
+        <button className='bg-blue-600 text-white h-10 w-20 shadow-2xl rounded-xl border hover:scale-105 hover:bg-emerald-500 hover:text-black ' onClick={() =>navigate("/signup")}>SignUp </button>
       </div>
       </div>
     </>

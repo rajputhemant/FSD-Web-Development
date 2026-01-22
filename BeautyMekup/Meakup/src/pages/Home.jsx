@@ -35,7 +35,7 @@ const Home = () => {
 
          
 
-         <div className=" bg-amber-200 w-370 h-150 mx-6 mt-1 shadow-2xs shadow-blue-800">
+         <div className=" bg-amber-200 w-380 h-150 my-6 mt-1 shadow-2xs shadow-blue-800">
               <div className=" flex justify-center text-red-600 font-bold text-lg ">  
               <h1>New Launches </h1>
               </div>

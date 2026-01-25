@@ -10,12 +10,14 @@ const Register = () => {
     mobileNumber: "",
     password: "",
     confirmPassword: "",
+    role: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [validationError, setValidationError] = useState({});
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value ,type} = e.target;
+   
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -26,6 +28,7 @@ const Register = () => {
       mobileNumber: "",
       password: "",
       confirmPassword: "",
+      role:"",
     });
   };
 
@@ -50,6 +53,9 @@ const Register = () => {
 
     if (!/^[6-9]\d{9}$/.test(formData.mobileNumber)) {
       Error.mobileNumber = "Only Indian Mobile Number allowed";
+    }
+    if(!formData.role){
+      Error.role="Please Choole any One"
     }
 
     setValidationError(Error);
@@ -103,6 +109,29 @@ const Register = () => {
               {/* Personal Information */}
               <div className="mb-10">
                 <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                     <label htmlFor="">I am</label>
+                    <div className="flex items-center gap-2">
+                     
+                      <input type="radio"name="role" id ="manager" checked={formData.role=="manager"}  value={"manager"} onChange={handleChange}/>
+                      <label htmlFor="manager">Resturant Manager</label>
+                    </div>
+                     <div className="flex items-center gap-2">
+                      <input type="radio"name="role" id ="partner" checked={formData.role=="partner"}  value={"partner"} onChange={handleChange}/>
+                      <label htmlFor="manager">Delivy Partner</label>
+                    </div>
+                     <div className="flex items-center gap-2">
+                      <input type="radio"name="role" id ="customer" checked={formData.role=="customer"}  value={"customer"} onChange={handleChange}/>
+                      <label htmlFor="manager">Customer</label>
+                   
+                  </div>
+                    
+                  </div>
+                   {validationError.role && (
+                      <span className="text-xs text-red-500">
+                        {validationError.role}
+                      </span>
+                    )}
                   <div>
                     <input
                       type="text"

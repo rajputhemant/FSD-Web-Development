@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import api from "../config/Api";
-import { Link } from "react-router-dom";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -16,7 +15,7 @@ const Register = () => {
   const [validationError, setValidationError] = useState({});
 
   const handleChange = (e) => {
-    const { name, value ,type} = e.target;
+    const { name, value } = e.target;
    
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -28,7 +27,7 @@ const Register = () => {
       mobileNumber: "",
       password: "",
       confirmPassword: "",
-      role:"",
+      role: "",
     });
   };
 
@@ -45,7 +44,7 @@ const Register = () => {
 
     if (
       !/^[\w\.]+@(gmail|outlook|ricr|yahoo)\.(com|in|co.in)$/.test(
-        formData.email
+        formData.email,
       )
     ) {
       Error.email = "Use Proper Email Format";
@@ -54,8 +53,9 @@ const Register = () => {
     if (!/^[6-9]\d{9}$/.test(formData.mobileNumber)) {
       Error.mobileNumber = "Only Indian Mobile Number allowed";
     }
-    if(!formData.role){
-      Error.role="Please Choole any One"
+
+    if (!formData.role) {
+      Error.role = "Please choose any one";
     }
 
     setValidationError(Error);
@@ -73,13 +73,17 @@ const Register = () => {
       return;
     }
 
+    console.log(formData);
+
+    
+
     try {
       const res = await api.post("/auth/register", formData);
       toast.success(res.data.message);
       handleClearForm();
     } catch (error) {
       console.log(error);
-      toast.error(error.message);
+      toast.error(error?.response?.data?.message || "Unknown Error");
     } finally {
       setIsLoading(false);
     }
@@ -109,29 +113,49 @@ const Register = () => {
               {/* Personal Information */}
               <div className="mb-10">
                 <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                     <label htmlFor="">I am</label>
-                    <div className="flex items-center gap-2">
-                     
-                      <input type="radio"name="role" id ="manager" checked={formData.role=="manager"}  value={"manager"} onChange={handleChange}/>
-                      <label htmlFor="manager">Resturant Manager</label>
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <label>I am </label>
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="radio"
+                          name="role"
+                          id="manager"
+                          checked={formData.role === "manager"}
+                          value={"manager"}
+                          onChange={handleChange}
+                        />
+                        <label htmlFor="manager">Resturant Manager</label>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="radio"
+                          name="role"
+                          id="partner"
+                          checked={formData.role === "partner"}
+                          value={"partner"}
+                          onChange={handleChange}
+                        />
+                        <label htmlFor="partner">Delivery Partner</label>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="radio"
+                          name="role"
+                          id="customer"
+                          checked={formData.role === "customer"}
+                          value={"customer"}
+                          onChange={handleChange}
+                        />
+                        <label htmlFor="customer">Customer</label>
+                      </div>
                     </div>
-                     <div className="flex items-center gap-2">
-                      <input type="radio"name="role" id ="partner" checked={formData.role=="partner"}  value={"partner"} onChange={handleChange}/>
-                      <label htmlFor="manager">Delivy Partner</label>
-                    </div>
-                     <div className="flex items-center gap-2">
-                      <input type="radio"name="role" id ="customer" checked={formData.role=="customer"}  value={"customer"} onChange={handleChange}/>
-                      <label htmlFor="manager">Customer</label>
-                   
-                  </div>
-                    
-                  </div>
-                   {validationError.role && (
+                     {validationError.role && (
                       <span className="text-xs text-red-500">
                         {validationError.role}
                       </span>
                     )}
+                  </div>
                   <div>
                     <input
                       type="text"
@@ -183,7 +207,7 @@ const Register = () => {
                   <input
                     type="password"
                     name="confirmPassword"
-                    placeholder="Confirm Password  "
+                    placeholder="Confirm Password"
                     value={formData.confirmPassword}
                     onChange={handleChange}
                     required
@@ -200,7 +224,7 @@ const Register = () => {
                   disabled={isLoading}
                   className="flex-1 bg-gray-300 text-gray-800 font-bold py-4 px-6 rounded-lg hover:bg-gray-400 transition duration-300 transform hover:scale-105 disabled:scale-100 disabled:bg-gray-300 disabled:cursor-not-allowed"
                 >
-                  Clear From
+                  Clear Form
                 </button>
                 <button
                   type="submit"
@@ -209,20 +233,10 @@ const Register = () => {
                 >
                   {isLoading ? "Submitting" : "Submit"}
                 </button>
-                
-              </div>
-              <div className=" px-2 mt-5  flex gap-2 items-center justify-center  ">
-               <p>You have Already Account Go to</p>
-               <Link to={"/login"}  className="text-blue-700 hover:scale-105">
-                 Login
-                </Link>
               </div>
             </form>
           </div>
-         
-         
-         
-         
+
           {/* Footer Note */}
           <p className="text-center text-gray-600 mt-8 text-sm">
             All fields marked are mandatory. We respect your privacy.

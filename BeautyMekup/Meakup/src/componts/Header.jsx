@@ -22,8 +22,8 @@ export const Header = () => {
       </div>
 
       <div className='flex justify-between gap-5 items-center'>
-        <button className='bg-blue-600 text-white h-10 w-20 shadow-2xl rounded-xl border hover:scale-105 hover:bg-emerald-500 hover:text-black ' onClick={() =>navigate("/login")}>Login</button>
-        <button className='bg-blue-600 text-white h-10 w-20 shadow-2xl rounded-xl border hover:scale-105 hover:bg-emerald-500 hover:text-black ' onClick={() =>navigate("/signup")}>SignUp </button>
+        <button className='bg-orange-700 text-white font-bold h-10 w-20 shadow rounded border hover:scale-105 hover:bg-emerald-500 hover:text-black ' onClick={() =>navigate("/login")}>Login</button>
+        <button className='bg-orange-700 text-white font-bold h-10 w-20 shadow rounded border hover:scale-105 hover:bg-emerald-500 hover:text-black ' onClick={() =>navigate("/signup")}>SignUp </button>
       </div>
       </div>
     </>

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
-  const { setUser, setIsLogin ,setRole} = useAuth();
+  const { setUser, setIsLogin, setRole } = useAuth();
 
   const navigate = useNavigate();
 
@@ -37,27 +37,33 @@ const Login = () => {
       toast.success(res.data.message);
       setUser(res.data.data);
       setIsLogin(true);
-      sessionStorage.setItem("CravingUser",JSON.stringify(res.data.data))
+      sessionStorage.setItem("CravingUser", JSON.stringify(res.data.data));
       handleClearForm();
-      switch(res.data.data.role){
-        case  "manager":{
-          setRole("manage");
+      switch (res.data.data.role) {
+        case "manager": {
+          setRole("manager");
           navigate("/resturant-dashboard");
           break;
         }
-         case  "partner":{
-          setRole("patner");
+        case "partner": {
+          setRole("partner");
           navigate("/rider-dashboard");
           break;
         }
-         case  "custmore":{
-          setRole("custmoer");
-          navigate("/customer-dashboard");
+        case "customer": {
+          setRole("customer");
+          navigate("/user-dashboard");
           break;
         }
-        
+        case "admin": {
+          setRole("admin");
+          navigate("/admin-dashboard");
+          break;
+        }
+
+        default:
+          break;
       }
-      navigate("/user-dashboard");
     } catch (error) {
       console.log(error);
       toast.error(error?.response?.data?.message || "Unknown Error");
@@ -113,7 +119,6 @@ const Login = () => {
                   />
                 </div>
               </div>
-              
 
               {/* Submit Button */}
               <div className="flex gap-4 pt-8 border-t-2 border-gray-200">

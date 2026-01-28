@@ -20,7 +20,7 @@ const UserProfile = () => {
     // form_Data.append("imageURL", preview);
 
     try {
-      const res = await api.patch("/user/changePhoto", form_Data);
+      const res = await api.patch("/user/changePhoto" , form_Data);
 
       toast.success(res.data.message);
 

@@ -19,9 +19,9 @@ export const Footer = () => {
         <div className=" ms-4 py-2">
            <h3 className="text-2xl text-black mb-2">Quik Links</h3>
             <div className=" grid gap-2 mx-3">
-             <Link to={"/"} className="decoration-none flex items-center gap-2 hover:scale-105">  <span>Home</span></Link>
-            <Link to={"/about"} className="decoration-none flex items-center gap-2 hover:scale-105"> <span>About</span></Link>
-            <Link to={"/product"} className="decoration-none  flex items-center gap-2 hover:scale-105"> <span>Product</span></Link>
+             <Link to={"/"} className="decoration-none flex items-center gap-2 hover:scale-105 hover:text-red-300">  <span>Home</span></Link>
+            <Link to={"/about"} className="decoration-none flex items-center gap-2 hover:scale-105 hover:text-red-300"> <span>About</span></Link>
+            <Link to={"/product"} className="decoration-none  flex items-center gap-2 hover:scale-105 hover:text-red-300"> <span>Product</span></Link>
            </div>
         </div>
         <div className=" ms-4 py-2 ">
@@ -51,7 +51,7 @@ export const Footer = () => {
 
       </div>
        <div className=" bg-gray-300 sahadow  w-380  h-10 border-gray-100 shadow-fuchsia-100 text-center ">
-        <h1>2026 Beauty Makeup. All right reserved</h1>
+        <h1>©️2026 Beauty Makeup. All right reserved</h1>
        </div>
     </>
     

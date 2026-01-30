@@ -5,10 +5,14 @@ export const UserUpdate = async (req, res, next) => {
   try {
     //logic here
 
-    const { fullName, email, mobileNumber } = req.body;
+    const { fullName, email, mobileNumber ,gender,dob,address,city,pin,documents,
+      paymentDetails,
+      geoLocation, } = req.body;
+    
     const currentUser = req.user;
+    
 
-    if (!fullName || !email || !mobileNumber) {
+    if (!fullName || !email || !mobileNumber||!gender||!dob||!address||!city||!pin) {
       const error = new Error("All Feilds Required");
       error.statusCode = 400;
       return next(error);
@@ -31,6 +35,14 @@ export const UserUpdate = async (req, res, next) => {
         fullName,
         email,
         mobileNumber,
+        gender,
+        dob,
+        address,
+        city,
+        pin,
+        documents,
+        paymentDetails,
+       geoLocation,
       },
       { new: true },
     );

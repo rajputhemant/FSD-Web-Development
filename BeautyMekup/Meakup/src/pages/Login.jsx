@@ -67,7 +67,7 @@ const Login = () => {
             <form onSubmit={handleSubmit} onReset={handleClearFrom}>
             <div className='grid items-center justify-center gap-2 border-0 rounded shadow w-190 py-5 mt-5'>
               <input type="email" name='email' id="email" placeholder='Email' value={formData.email} onChange={handlechange}  required disabled={isLoading} className='border-2 border-blue-200 w-120 h-10 text-gray-900 py-2 rounded shadow hover:border-orange-700' />
-              <input type="password" name='password' id="password" placeholder='Create Password' value={formData.password} onChange={handlechange}  required disabled={isLoading} className='border-2 border-blue-200 w-120 h-10 text-gray-900 py-2 rounded shadow hover:border-orange-700' />
+              <input type="password" name='password' id="password" placeholder='Enter Password' value={formData.password} onChange={handlechange}  required disabled={isLoading} className='border-2 border-blue-200 w-120 h-10 text-gray-900 py-2 rounded shadow hover:border-orange-700' />
              
                <div className='flex  justify-between mt-8'>
                <button type='reset' disabled={isLoading} className='bg-red-600 border rounded shadow w-40 h-10 text-xl text-white font-bold hover:bg-sky-300 hover:scale-105  '>Clear</button>
@@ -84,6 +84,10 @@ const Login = () => {
             </div>
             </div>
            </form>
+           {/* Footer Note */}
+          <p className="text-center text-gray-600 mt-8 text-sm">
+            All fields marked are mandatory. We respect your privacy.
+          </p>
       </div> 
 
       </div>

@@ -1,11 +1,9 @@
-
- import Contact from "../models/contactModel.js";
+import Contact from "../models/contactModel.js";
 
 export const NewContact = async (req, res, next) => {
-    try {
-        const { fullName, email, mobileNumber,message } = req.body;
+  try {
+    const { fullName, email, mobileNumber, message } = req.body;
 
-    
     if (!fullName || !email || !mobileNumber || !message) {
       const error = new Error("All feilds required");
       error.statusCode = 400;
@@ -16,20 +14,18 @@ export const NewContact = async (req, res, next) => {
       fullName,
       email,
       mobileNumber,
-     message,
+      message,
     });
 
     console.log(newContact);
 
-    res.status(201).json({message:"Thanks for contacting us. we will Get to Back to you in 24-48 Hours",
-
-    });
-    
-    
-     
-        
-    } catch (error) {
-        next(error);
-    }
+    res
+      .status(201)
+      .json({
+        message:
+          "Thanks for Contacting us. We will Get Back to you in 24-48 Hours",
+      });
+  } catch (error) {
+    next(error);
+  }
 };
-  

@@ -10,6 +10,7 @@ const RestaurantEarnings = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

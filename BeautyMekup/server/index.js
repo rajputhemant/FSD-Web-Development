@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express'
 import connectDB from "./src/config/db.js"
+import authRouter from "./src/routers/authRouter.js"
 
 const app = express();
 app.get("/",(req,res)=>{

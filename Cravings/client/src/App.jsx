@@ -11,7 +11,7 @@ import UserDashboard from './pages/dashboards/UserDashboard';
 import RiderDashboard from './pages/dashboards/RiderDashboard';
 import AdminDashboard from './pages/dashboards/AdminDashboard';
 import ResturantDashboard from './pages/dashboards/ResturantDashboard';
-
+import NotFound from './pages/NotFound';
 const  App=()=> {
   return (
     <>
@@ -28,6 +28,7 @@ const  App=()=> {
       <Route  path='/ride-dashboard' element={<RiderDashboard/>} />
       <Route  path='/admin-dashboard' element={<AdminDashboard/>} />
       <Route  path='/resturant-dashboard' element={<ResturantDashboard/>} />
+      <Route  path='*' element={<NotFound/>} />
     </Routes>
 
    
